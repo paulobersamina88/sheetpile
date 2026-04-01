@@ -1,20 +1,24 @@
 
-# AI for SE - Shoring / Sheet Pile Wall Design Prototype
+# RC Cantilever Shoring Wall Design - Streamlit Prototype
 
-This is a Streamlit prototype inspired by the sheet pile / shoring design sheet you shared.
+This version is focused on the **engineering design logic** visible in your screenshots rather than copying the static worksheet appearance.
 
-## What it includes
-- Input panel for soil, surcharge, pile geometry, and reinforcement
-- Summary page with wall sketch and section view
-- Analysis page with force calculations
-- Capacity page with a simplified axial-flexural interaction diagram
-- Shear check and embedment estimate
-- CSV export of key results
+## Included
+- Input parameters taken from the sample image
+- Force calculations using the visible equations
+- IBC-style limit checks shown in the image
+- ACI-style shear check
+- Simplified circular RC axial-flexural interaction diagram
+- Embedment estimate
+- CSV export
 
-## Important note
-This is a planning/prototype tool for engineering review. It is **not** a sealed design package and the formulas should be checked against your exact office design procedure, current code interpretation, and project conditions.
+## Important
+This is still a prototype and should be checked against:
+- your exact office design sheet
+- final code interpretation
+- project-specific geotechnical assumptions
 
-## Run locally
+## Run
 ```bash
 pip install -r requirements.txt
 streamlit run app.py
