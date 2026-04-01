@@ -83,7 +83,7 @@ def circular_segment_area(y_top, r):
     if len(ys) == 0:
         return 0.0
     widths = 2 * np.sqrt(np.clip(r**2 - ys**2, 0, None))
-    return np.trapz(widths, ys)
+    return np.trapezoid(widths, ys)
 
 
 def circular_segment_centroid_from_center(y_top, r):
@@ -91,10 +91,10 @@ def circular_segment_centroid_from_center(y_top, r):
     if len(ys) == 0:
         return 0.0
     widths = 2 * np.sqrt(np.clip(r**2 - ys**2, 0, None))
-    area = np.trapz(widths, ys)
+    area = np.trapezoid(widths, ys)
     if area <= 1e-9:
         return 0.0
-    q = np.trapz(ys * widths, ys)
+    q = np.trapezoid(ys * widths, ys)
     return q / area
 
 
